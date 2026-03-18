@@ -1,0 +1,67 @@
+// slovniky.js – všechny slovníky pro analyzátor metafor
+// Upravujte dle potřeby – přidávejte nová slova do seznamů.
+
+const SLOVNIKY = {
+    // Lidská slovesa – co dělají lidé (pro personifikaci)
+    lidskaSlovesa: [
+        'mluví', 'řekl', 'říká', 'zeptala', 'odpověděla', 'vysvětloval', 'přemýšlí',
+        'myslí', 'cítí', 'vidí', 'slyší', 'chce', 'touží', 'bojí se', 'raduje se',
+        'směje', 'pláče', 'vzpomíná', 'zapomněl', 'pamatuje', 'sní', 'přemýšlí',
+        'rozumí', 'nerozumí', 'pochybuje', 'věří', 'nevěří', 'rozhodl', 'váhá',
+        'píše', 'zapisuje', 'kreslí', 'počítá', 'počítal', 'spočítal', 'měří',
+        'pozoruje', 'vnímá', 'cítí', 'prožívá', 'trpí', 'těší se', 'doufá'
+    ],
+
+    // Fyzická slovesa – co se děje s hmotou (pro fyzikalizaci)
+    fyzickaSlovesa: [
+        'padá', 'spadl', 'padají', 'letí', 'letěl', 'vznáší se', 'stoupá', 'klesá',
+        'teče', 'plyne', 'teče', 'kapal', 'kape', 'teče', 'tuhne', 'tvrdne', 'měkne',
+        'visí', 'visel', 'zavěsil', 'přilepil', 'odlepil', 'rozbil', 'rozpadl',
+        'spolkl', 'polyká', 'krká', 'vyplivl', 'dýchá', 'vdechuje', 'vydechuje',
+        'hýbe se', 'pohybuje', 'zastavil', 'zrychlil', 'zpomalil', 'otočil', 'zatočil'
+    ],
+
+    // Běžná spojení – co NENÍ metafora (pro odfiltrování falešných poplachů)
+    beznaSpojeni: [
+        'je člověk', 'je zvíře', 'je pes', 'je kočka', 'je dům', 'je strom',
+        'je voda', 'je vzduch', 'je oheň', 'je země', 'je slunce', 'je měsíc',
+        'je den', 'je noc', 'je ráno', 'je večer', 'je jaro', 'je léto',
+        'je podzim', 'je zima', 'je čas', 'je hodina', 'je den', 'je týden',
+        'je měsíc', 'je rok', 'je barva', 'je černá', 'je bílá', 'je červená',
+        'je modrá', 'je zelená', 'je žlutá', 'je velký', 'je malý', 'je teplý',
+        'je studený', 'je suchý', 'je mokrý', 'je tvrdý', 'je měkký', 'je lehký',
+        'je těžký', 'je rychlý', 'je pomalý', 'je starý', 'je mladý', 'je nový'
+    ],
+
+    // Neživé podmět (pro personifikaci)
+    nezivePodmety: [
+        'čas', 'den', 'noc', 'tma', 'světlo', 'stín', 'voda', 'vítr', 'oheň',
+        'země', 'nebe', 'vesmír', 'svět', 'příroda', 'život', 'smrt', 'láska',
+        'nenávist', 'strach', 'radost', 'smutek', 'bolest', 'naděje', 'myšlenka',
+        'nápad', 'otázka', 'odpověď', 'problém', 'řešení', 'cesta', 'cíl',
+        'minulost', 'přítomnost', 'budoucnost', 'paměť', 'vzpomínka', 'sen',
+        'město', 'dům', 'strom', 'kámen', 'řeka', 'hora', 'pole', 'les'
+    ],
+
+    // Abstraktní pojmy (pro fyzikalizaci)
+    abstraktni: [
+        'slovo', 'věta', 'řeč', 'jazyk', 'myšlenka', 'nápad', 'otázka',
+        'odpověď', 'význam', 'smysl', 'pravda', 'lež', 'láska', 'strach',
+        'radost', 'smutek', 'bolest', 'naděje', 'paměť', 'vzpomínka', 'sen',
+        'čas', 'minulost', 'přítomnost', 'budoucnost', 'život', 'smrt'
+    ],
+
+    // Materiály (pro materializaci emocí)
+    materialy: [
+        'keramický', 'plastový', 'dřevěný', 'kamenný', 'skleněný',
+        'železný', 'ocelový', 'papírový', 'textilní', 'kožený',
+        'betonový', 'cihlový', 'mramorový', 'zlatý', 'stříbrný'
+    ],
+
+    // Emoce a abstraktní stavy (pro materializaci)
+    emoce: [
+        'smutek', 'soucit', 'láska', 'radost', 'strach', 'bolest',
+        'naděje', 'vztek', 'žárlivost', 'závist', 'štěstí', 'klid',
+        'smysl', 'význam', 'pravda', 'lež', 'křivda', 'spravedlnost'
+    ]
+};
