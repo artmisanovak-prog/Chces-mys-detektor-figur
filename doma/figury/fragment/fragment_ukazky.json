@@ -1,0 +1,49 @@
+// ========== figury/fragment/fragment_ukazky.json ==========
+{
+  "nazev": "Fragment",
+  "popis": "Izolovaný větný úsek, který není gramaticky úplnou větou, ale stojí samostatně (často oddělený mezerami nebo na samostatném řádku).",
+  "ukazky": [
+    {
+      "text": "– čáp, páv, kocour, kozel…",
+      "pohadka": "Křivá pohádka",
+      "kontext": "Výčet zvířat.",
+      "poznamka": "Fragment výčtu."
+    },
+    {
+      "text": "Do ticha. Do koutů. Do skulin.",
+      "pohadka": "O myši",
+      "kontext": "Kam myš zapisuje.",
+      "poznamka": "Série fragmentů (každý je elipsou i fragmentem)."
+    },
+    {
+      "text": "Ne v řadě. Ne v kruhu. Prostě… tak nějak.",
+      "pohadka": "O myši",
+      "kontext": "Hromadění zvířat.",
+      "poznamka": "Fragmenty."
+    },
+    {
+      "text": "Byl to klíč. A pádlo. A past.",
+      "pohadka": "O myši",
+      "kontext": "Co je myš.",
+      "poznamka": "Fragmentární výčet."
+    },
+    {
+      "text": "Promiň, že jsem…",
+      "pohadka": "O pavoukovi",
+      "kontext": "Nedokončená věta na pavučině.",
+      "poznamka": "Fragment s třemi tečkami."
+    },
+    {
+      "text": "Jen tak. Tak.",
+      "pohadka": "O pavoukovi",
+      "kontext": "Závěr.",
+      "poznamka": "Dva fragmenty."
+    },
+    {
+      "text": "Ono. ale.",
+      "pohadka": "O pandě a vlkovi",
+      "kontext": "Meta-komentář.",
+      "poznamka": "Dva samostatné fragmenty."
+    }
+  ]
+}
