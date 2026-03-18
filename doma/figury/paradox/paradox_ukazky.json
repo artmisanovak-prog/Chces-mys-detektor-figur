@@ -1,0 +1,49 @@
+// ========== figury/paradox/paradox_ukazky.json ==========
+{
+  "nazev": "Paradox",
+  "popis": "Zdánlivě nesmyslné tvrzení, které může obsahovat pravdu, logický rozpor.",
+  "ukazky": [
+    {
+      "text": "Skončil větu a pak skončil krkat.",
+      "pohadka": "O kocourovi",
+      "kontext": "Kocour krkal tečky a dokončoval věty.",
+      "poznamka": "Dva konce najednou – paradox."
+    },
+    {
+      "text": "Všechno, co přežije proti logice, se stane pohádkou.",
+      "pohadka": "O zaječici",
+      "kontext": "Zaječice přežila oheň.",
+      "poznamka": "Přežití proti logice je paradox."
+    },
+    {
+      "text": "Jednorožec byl. To je první lež.",
+      "pohadka": "O jednorožci",
+      "kontext": "Mýtus o jednorožci.",
+      "poznamka": "Lež, která je zároveň pravdou příběhu."
+    },
+    {
+      "text": "Pokud je z reálných věcí, může být reálný. A pokud je reálný, přestává být jednorožec.",
+      "pohadka": "O jednorožci",
+      "kontext": "Úvaha o identitě jednorožce.",
+      "poznamka": "Paradox identity – být reálný znamená přestat být tím, čím je."
+    },
+    {
+      "text": "Možná je tohle ten největší pád. Když se nic nezmění.",
+      "pohadka": "O pavoukovi",
+      "kontext": "Myš komentuje visící věci.",
+      "poznamka": "Pád jako nezměněnost – paradox."
+    },
+    {
+      "text": "Některé věci padají vzhůru.",
+      "pohadka": "O hadovi",
+      "kontext": "Had mluví o fyzice.",
+      "poznamka": "Fyzikální nemožnost – paradox."
+    },
+    {
+      "text": "Černá a bílá jsou jen slova.",
+      "pohadka": "O pandě a vlkovi",
+      "kontext": "Vlk vysvětluje své vnímání.",
+      "poznamka": "Barvy redukované na slova – paradox vnímání."
+    }
+  ]
+}
