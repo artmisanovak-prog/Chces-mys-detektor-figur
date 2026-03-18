@@ -1,0 +1,37 @@
+// ========== figury/hyperbola/hyperbola_ukazky.json ==========
+{
+  "nazev": "Hyperbola",
+  "popis": "Záměrné přehánění pro zdůraznění, nadsázka.",
+  "ukazky": [
+    {
+      "text": "zem se slehla",
+      "pohadka": "O kocourovi",
+      "kontext": "Po sežrání berušek.",
+      "poznamka": "Nadsázka – země se fyzicky neslehne."
+    },
+    {
+      "text": "celou půlhodinu nemohl tenkrát nikdo nic ne – dokončit",
+      "pohadka": "O kocourovi",
+      "kontext": "Kocour krkal tečky a skákal do řeči.",
+      "poznamka": "„nikdo nic“ – absolutní tvrzení, nadsázka."
+    },
+    {
+      "text": "ticho tak hluboké, že i vesmír zadržel dech",
+      "pohadka": "O plameňákovi",
+      "kontext": "Plameňák dopadl na dno vesmíru.",
+      "poznamka": "Extrémní nadsázka."
+    },
+    {
+      "text": "obočí mu vyšplhaly do tak vysokého oblouku, že mu na nich začaly hnízdit ptáci",
+      "pohadka": "O pandě a vlkovi",
+      "kontext": "Vlk žasne nad výrokem pandy.",
+      "poznamka": "Absurdní nadsázka."
+    },
+    {
+      "text": "mezinárodní hit takřka přes noc",
+      "pohadka": "O pandě a vlkovi",
+      "kontext": "Vlkova příručka se stala hitem.",
+      "poznamka": "Reklamní nadsázka."
+    }
+  ]
+}
