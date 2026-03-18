@@ -14,6 +14,12 @@ Licence: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (
 
 **Chceš myš?** není učebnice. Není to diagnostický nástroj. Není to akademická databáze figur. Je to **kreativní dílna jazyka** – soubor nástrojů, her a cvičení, které vznikly z jedné prosté otázky: *Co se děje s jazykem, když ho přestaneme používat jen jako nástroj a začneme ho vnímat jako hmotu, jako hřiště, jako prostor pro objevování?*
 
+---
+
+[metafora analýa](doma/figury/metafora/analyza.html)
+
+---
+
 Za vším stojí příběh. Kdysi dávno, u jedné kočky a myši, se stalo něco, co změnilo způsob, jakým vnímám svět. Kočka lovila, myš utíkala, spolubydlící nadával – a já viděla všechny ty perspektivy najednou. Bylo mi líto, že se navzájem nevidí. Tehdy jsem pochopila, že není možné vysvětlit, jaké to je dívat se z více stran. Musí si to člověk zažít. A tak vznikly karty, pohádky a nakonec celý systém.
 
 Projekt stojí na čtyřech pilířích, které se vzájemně doplňují a vytvářejí otevřený, modulární systém.
