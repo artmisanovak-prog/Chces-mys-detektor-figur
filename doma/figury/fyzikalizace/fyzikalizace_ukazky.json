@@ -1,0 +1,43 @@
+// ========== figury/fyzikalizace/fyzikalizace_ukazky.json ==========
+{
+  "nazev": "Fyzikalizace jazyka",
+  "popis": "Zacházení s jazykem (slovy, větami, myšlenkami) jako s hmotnými objekty.",
+  "ukazky": [
+    {
+      "text": "Kocour krkal tečky a dokončoval věty!",
+      "pohadka": "O kocourovi",
+      "kontext": "Kocour po sežrání berušek.",
+      "poznamka": "Tečky jako hmotné objekty, které lze polykat a krkat."
+    },
+    {
+      "text": "věta visela mezi dvěma větvemi",
+      "pohadka": "O pavoukovi",
+      "kontext": "Pavouk věší věci na nitě.",
+      "poznamka": "Věta jako fyzický předmět."
+    },
+    {
+      "text": "Do skulin mezi slovama",
+      "pohadka": "O myši",
+      "kontext": "Myš zapisuje.",
+      "poznamka": "Slova mají fyzické mezery."
+    },
+    {
+      "text": "keramický smutek, plastový soucit",
+      "pohadka": "O krokodýlovi",
+      "kontext": "Věci na poličce.",
+      "poznamka": "Emoce jako hmotné předměty."
+    },
+    {
+      "text": "ticho, které má tvar",
+      "pohadka": "O lišce",
+      "kontext": "Liška jako legenda.",
+      "poznamka": "Abstraktní ticho dostává fyzickou vlastnost."
+    },
+    {
+      "text": "přesná slova proudí jak voda",
+      "pohadka": "O rybě",
+      "kontext": "Rybí rap.",
+      "poznamka": "Slova proudí jako kapalina."
+    }
+  ]
+}
