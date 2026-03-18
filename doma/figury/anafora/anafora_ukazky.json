@@ -1,0 +1,37 @@
+// ========== figury/anafora/anafora_ukazky.json ==========
+{
+  "nazev": "Anafora",
+  "popis": "Opakování stejného slova nebo slovního spojení na začátku po sobě jdoucích vět.",
+  "ukazky": [
+    {
+      "text": "Nebyla nijak zvlášť rychlá… Nebyla hloupá…",
+      "pohadka": "O myši",
+      "kontext": "Charakteristika myši.",
+      "poznamka": "Opakování „Nebyla“."
+    },
+    {
+      "text": "Místo kouzel… Místo dobra a zla…",
+      "pohadka": "Křivá pohádka",
+      "kontext": "Úvodní text.",
+      "poznamka": "Opakování „Místo“."
+    },
+    {
+      "text": "Do ticha. Do koutů. Do skulin.",
+      "pohadka": "O myši",
+      "kontext": "Kam myš zapisuje.",
+      "poznamka": "Opakování předložky „Do“."
+    },
+    {
+      "text": "Říká se, že ryby mlčí. Že nemají hlas. Že jen plavou…",
+      "pohadka": "O rybě",
+      "kontext": "Úvod pohádky.",
+      "poznamka": "Opakování „Že“."
+    },
+    {
+      "text": "Je to rytmus proudů. Je to nížka, výška vln a vlnek. Je to tempo vodních kruhů.",
+      "pohadka": "O rybě",
+      "kontext": "Definice rybího rapu.",
+      "poznamka": "Opakování „Je to“."
+    }
+  ]
+}
