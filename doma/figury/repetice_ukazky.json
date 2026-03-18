@@ -1,0 +1,43 @@
+// ========== figury/repetice/repetice_ukazky.json ==========
+{
+  "nazev": "Repetice",
+  "popis": "Opakování stejného slova nebo slovního spojení v krátkém úseku pro zdůraznění.",
+  "ukazky": [
+    {
+      "text": "přesně -14 teček... přesně. ... přesně. ... přesně.",
+      "pohadka": "O kocourovi",
+      "kontext": "Kocour zdůrazňuje přesnost.",
+      "poznamka": "Opakování slova „přesně“."
+    },
+    {
+      "text": "ne tři, ne jednu – dvě – přesně",
+      "pohadka": "O kocourovi",
+      "kontext": "Výčet možností.",
+      "poznamka": "Opakování „ne“."
+    },
+    {
+      "text": "Dávaj rytmus vodě. Dávaj smysl tichu. Dávají beaty proudům.",
+      "pohadka": "O rybě",
+      "kontext": "Co dělají ryby.",
+      "poznamka": "Opakování „dávaj“."
+    },
+    {
+      "text": "Možná je čas… Možná je čas… Možná je čas…",
+      "pohadka": "O rybě",
+      "kontext": "Závěr pohádky.",
+      "poznamka": "Opakování celé fráze."
+    },
+    {
+      "text": "Do ticha. Do koutů. Do skulin.",
+      "pohadka": "O myši",
+      "kontext": "Kam myš zapisuje.",
+      "poznamka": "Opakování předložky „Do“ (zároveň anafora, ale i repetice)."
+    },
+    {
+      "text": "Nebyla nijak zvlášť rychlá, ale ani úplně pomalá. Nebyla hloupá, ale ani kdovíjak chytrá.",
+      "pohadka": "O myši",
+      "kontext": "Charakteristika myši.",
+      "poznamka": "Opakování „nebyla“."
+    }
+  ]
+}
