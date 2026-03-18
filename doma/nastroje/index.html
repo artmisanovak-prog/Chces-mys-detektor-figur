@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detektor figur · Chceš myš?</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000; color: #fff; font-family: 'Courier New', monospace;
+            line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto;
+        }
+        h1 { font-size: 2rem; font-weight: 300; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        h2 { font-size: 1.3rem; font-weight: 300; margin: 30px 0 15px; color: #ccc; }
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;
+        }
+        .card {
+            background: #111; border: 1px solid #222; padding: 15px; text-decoration: none; color: #fff;
+            transition: all 0.2s; display: block;
+        }
+        .card:hover { border-color: #555; background: #1a1a1a; }
+        .card small { color: #666; display: block; margin-top: 5px; }
+        .footer {
+            margin-top: 50px; border-top: 1px solid #222; padding-top: 20px; color: #444; font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>DETEKTOR FIGUR</h1>
+    <p style="color:#aaa; margin-bottom:30px;">
+        Systém pro detekci jazykových figur založený na analýze 40 pohádek.<br>
+        Všechny nástroje fungují offline – žádný server, žádné databáze.
+    </p>
+
+    <h2>🔍 HLAVNÍ NÁSTROJE</h2>
+    <div class="grid">
+        <a href="doma/nastroje/analyzer.html" class="card">
+            <strong>HLAVNÍ ANALYZÁTOR</strong>
+            <small>spojuje všechny detektory dohromady</small>
+        </a>
+        <a href="doma/nastroje/porovnavac.html" class="card">
+            <strong>POROVNÁVAČ TEXTŮ</strong>
+            <small>porovná stylistické profily</small>
+        </a>
+        <a href="doma/nastroje/kreativni.html" class="card">
+            <strong>KREATIVNÍ GENERÁTOR</strong>
+            <small>cvičení na míru podle figur</small>
+        </a>
+    </div>
+
+    <h2>📖 FIGURY (samostatné detektory)</h2>
+    <div class="grid">
+        <a href="doma/figury/elipsa/elipsa_detektor.html" class="card">
+            <strong>ELIPSA</strong>
+            <small>výpadek sloves, fragmenty</small>
+        </a>
+        <a href="doma/figury/metafora/metafora_detektor.html" class="card">
+            <strong>METAFORA</strong>
+            <small>X je Y, přirovnání</small>
+        </a>
+        <a href="doma/figury/personifikace/personifikace_detektor.html" class="card">
+            <strong>PERSONIFIKACE</strong>
+            <small>neživé + lidské sloveso</small>
+        </a>
+        <a href="doma/figury/paradox/paradox_detektor.html" class="card">
+            <strong>PARADOX</strong>
+            <small>logický rozpor</small>
+        </a>
+        <a href="#" class="card" style="opacity:0.5; pointer-events:none;">
+            <strong>ANAFORA</strong>
+            <small>(připravuje se)</small>
+        </a>
+        <a href="#" class="card" style="opacity:0.5; pointer-events:none;">
+            <strong>GRADACE</strong>
+            <small>(připravuje se)</small>
+        </a>
+    </div>
+
+    <h2>📚 POHÁDKY (anotované)</h2>
+    <div class="grid">
+        <a href="doma/pohadky/mys.md" class="card">
+            <strong>O MYŠI</strong>
+            <small>JSON + MD anotace</small>
+        </a>
+        <a href="doma/pohadky/kocour.md" class="card">
+            <strong>O KOCOUROVI</strong>
+            <small>JSON + MD anotace</small>
+        </a>
+        <a href="doma/pohadky/ryba.md" class="card">
+            <strong>O RYBĚ</strong>
+            <small>JSON + MD anotace</small>
+        </a>
+        <a href="doma/pohadky/zajic.md" class="card">
+            <strong>O ZAJEČICI</strong>
+            <small>JSON + MD anotace</small>
+        </a>
+    </div>
+
+    <div class="footer">
+        © Michaela Nováková 2026 · projekt Chceš myš? · licence CC BY-NC-SA
+    </div>
+</body>
+</html>
