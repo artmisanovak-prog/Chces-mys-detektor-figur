@@ -1,0 +1,43 @@
+// ========== figury/apostrofa/apostrofa_ukazky.json ==========
+{
+  "nazev": "Apostrofa",
+  "popis": "Oslovení nepřítomné osoby, abstraktní entity, zvířete, věci nebo čtenáře.",
+  "ukazky": [
+    {
+      "text": "Představte si to:",
+      "pohadka": "O kocourovi",
+      "kontext": "Vypravěč oslovuje čtenáře.",
+      "poznamka": "Přímé oslovení čtenáře."
+    },
+    {
+      "text": "Neboj se strachu.",
+      "pohadka": "O zaječici",
+      "kontext": "Poučení na konci pohádky.",
+      "poznamka": "Oslovení (děti, čtenáři)."
+    },
+    {
+      "text": "Teď byste čekali, že se promění v popel…",
+      "pohadka": "O zaječici",
+      "kontext": "Vypravěč oslovuje čtenáře.",
+      "poznamka": "Oslovení čtenářů („byste“)."
+    },
+    {
+      "text": "Buďte dojatí.",
+      "pohadka": "O krokodýlovi",
+      "kontext": "Krokodýl mluví k paní.",
+      "poznamka": "Oslovení (zákazníků)."
+    },
+    {
+      "text": "zůstaň v klidu, když ti někdo řekne, že něco není možné",
+      "pohadka": "O jednorožci",
+      "kontext": "Závěr pohádky.",
+      "poznamka": "Oslovení čtenáře („zůstaň“, „ti“)."
+    },
+    {
+      "text": "Chceš myš?",
+      "pohadka": "O myši",
+      "kontext": "Klíčová otázka celého systému.",
+      "poznamka": "Oslovení čtenáře („Chceš“)."
+    }
+  ]
+}
