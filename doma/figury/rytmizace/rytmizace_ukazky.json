@@ -1,0 +1,37 @@
+// ========== figury/rytmizace/rytmizace_ukazky.json ==========
+{
+  "nazev": "Rytmizace",
+  "popis": "Pravidelné střídání délek vět, opakování stejně dlouhých úseků, vytváření rytmu.",
+  "ukazky": [
+    {
+      "text": "Hlubší. Širší. Pomalejší.",
+      "pohadka": "O rybě",
+      "kontext": "Popis šíření zvuku.",
+      "poznamka": "Tři krátké věty stejné délky."
+    },
+    {
+      "text": "Do ticha. Do koutů. Do skulin.",
+      "pohadka": "O myši",
+      "kontext": "Kam myš zapisuje.",
+      "poznamka": "Tři stejně strukturované krátké věty."
+    },
+    {
+      "text": "Ne v řadě. Ne v kruhu. Prostě… tak nějak.",
+      "pohadka": "O myši",
+      "kontext": "Hromadění zvířat.",
+      "poznamka": "Dvě krátké, pak delší věta – rytmický zlom."
+    },
+    {
+      "text": "Ne zvíře. Ne postava. Ne symbol. Ale produkt.",
+      "pohadka": "O krokodýlovi",
+      "kontext": "Co je krokodýl.",
+      "poznamka": "Tři krátké, pak jedna delší – rytmická gradace."
+    },
+    {
+      "text": "Bílý. Roh. Lesk.",
+      "pohadka": "O jednorožci",
+      "kontext": "Popis jednorožce.",
+      "poznamka": "Tři jednoslovné věty."
+    }
+  ]
+}
