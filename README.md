@@ -18,6 +18,24 @@ Licence: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (
 
 - [metafora analýa](doma/figury/metafora/analyza.html)
 - [analyzator metafor MINI](doma/analyzator_metafor.html)
+- [gradace](doma/figury/gradace/gradace_detektor.html)
+- [anafora](doma/figury/anafora/anafora_detektor.html)
+- [hyperbola](doma/figury/hyperbola/hyperbola_detektor.html)
+
+- 
+- [elypsa](doma/figury/elipsa/elypsa_detektor.html)
+- [negace](doma/negace/negace_detektor.html)
+- [paradox](doma/figury/paradox/paradox_detektor.html)
+- [kontrast](doma/figury/kontrast/kontrast_detektor.html)
+- [apostrofa](doma/figury/apostrofa/apostrofa_detektor.html)
+
+- 
+
+- [personifikace](doma/figury/personifikace/personifikace_detektor.html.html)
+- [repetice](doma/figury/repetice/repetice_detektor.html)
+- [rytmizace](doma/figury/rytmizace/rytmizace_detektor.html)
+- [fyzikalizace_jazyka](doma/figury/fyzika_jazyka/fyzika_jazyka_detektor.html)
+- [oxymoron](doma/figury/oxymoron/oxymoron_detektor.html)
 
 ---
 
@@ -166,3 +184,30 @@ Projekt **Chceš myš?** není jen sbírka pohádek. Není jen databáze figur. 
 ---
 
 *Dokumentace vytvořena v březnu 2026.*
+
+---
+
+index html - odkazy:
+<!-- v sekci FIGURY přidat: -->
+<a href="doma/figury/hyperbola/hyperbola_detektor.html" class="card">
+    <strong>HYPERBOLA</strong>
+    <small>nadsázka, přehánění</small>
+</a>
+<a href="doma/figury/gradace/gradace_detektor.html" class="card">
+    <strong>GRADACE</strong>
+    <small>stupňování, řazení</small>
+</a>
+<a href="doma/figury/anafora/anafora_detektor.html" class="card">
+    <strong>ANAFORA</strong>
+    <small>opakování na začátku vět</small>
+</a>
+
+const DETEKTORY = [
+    { nazev: 'elipsa', soubor: '../figury/elipsa/elipsa.js' },
+    { nazev: 'metafora', soubor: '../figury/metafora/metafora.js' },
+    { nazev: 'personifikace', soubor: '../figury/personifikace/personifikace.js' },
+    { nazev: 'paradox', soubor: '../figury/paradox/paradox.js' },
+    { nazev: 'hyperbola', soubor: '../figury/hyperbola/hyperbola.js' },
+    { nazev: 'gradace', soubor: '../figury/gradace/gradace.js' },
+    { nazev: 'anafora', soubor: '../figury/anafora/anafora.js' }
+];
