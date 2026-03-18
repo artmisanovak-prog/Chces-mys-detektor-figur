@@ -1,0 +1,105 @@
+<!-- ========== figury/fragment/fragment_detektor.html ========== -->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detektor fragmentů · Chceš myš?</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000; color: #fff; font-family: 'Courier New', monospace;
+            line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto;
+        }
+        h1 { font-size: 2rem; font-weight: 300; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        textarea {
+            width: 100%; background: #111; border: 1px solid #333; color: #fff;
+            font-family: 'Courier New', monospace; font-size: 1rem; padding: 15px;
+            margin: 15px 0; border-radius: 0; resize: vertical;
+        }
+        button {
+            background: #000; color: #fff; border: 1px solid #444; padding: 12px 25px;
+            font-family: 'Courier New', monospace; font-size: 1rem; cursor: pointer;
+            margin-bottom: 30px; transition: all 0.2s;
+        }
+        button:hover { background: #111; border-color: #888; }
+        .results { border: 1px solid #333; padding: 20px; margin-top: 20px; }
+        .item {
+            border-left: 2px solid #555; padding: 10px 15px; margin-bottom: 10px; background: #0a0a0a;
+        }
+        .ukazka {
+            margin-top: 30px; border-top: 1px solid #222; padding-top: 20px;
+        }
+        .ukazka-grid {
+            display: grid; gap: 10px; margin-top: 10px;
+        }
+        .ukazka-card {
+            background: #111; border: 1px solid #222; padding: 10px;
+        }
+        .footer {
+            margin-top: 40px; color: #444; font-size: 0.8rem; text-align: right;
+        }
+    </style>
+    <script src="../../nastroje/shared/utils.js"></script>
+    <script src="fragment.js"></script>
+</head>
+<body>
+    <h1>DETEKTOR FRAGMENTŮ</h1>
+    <p style="color:#aaa; margin-bottom:20px;">↑ hledá krátké izolované úseky, nedokončené věty, výčty</p>
+
+    <textarea id="inputText" rows="8" placeholder="Sem vlož text k analýze..."></textarea>
+    <button id="analyzeBtn">ANALYZOVAT FRAGMENTY</button>
+
+    <div id="results" class="results" style="display: none;">
+        <h2>🔍 Nalezené fragmenty</h2>
+        <div id="seznam"></div>
+        <div id="pocet" style="margin-top:10px; color:#aaa;"></div>
+    </div>
+
+    <div class="ukazka">
+        <h3>📖 Ukázky z pohádek</h3>
+        <div class="ukazka-grid" id="ukazky"></div>
+    </div>
+
+    <div class="footer">
+        fragment · součást projektu Chceš myš? · © Michaela Nováková 2026
+    </div>
+
+    <script>
+        fetch('fragment_ukazky.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('ukazky');
+                data.ukazky.forEach(u => {
+                    container.innerHTML += `
+                        <div class="ukazka-card">
+                            <strong>„${u.text}“</strong><br>
+                            <span style="color:#888; font-size:0.8rem;">${u.pohadka} · ${u.poznamka}</span>
+                        </div>
+                    `;
+                });
+            });
+
+        document.getElementById('analyzeBtn').addEventListener('click', function() {
+            const text = document.getElementById('inputText').value.trim();
+            if (!text) { alert('Vlož text.'); return; }
+
+            const vysledky = detekujFragment(text);
+            const seznamDiv = document.getElementById('seznam');
+            const resultsDiv = document.getElementById('results');
+
+            if (vysledky.length === 0) {
+                seznamDiv.innerHTML = '<p style="color:#888;">✗ Žádné fragmenty nenalezeny.</p>';
+            } else {
+                let html = '';
+                vysledky.forEach(v => {
+                    html += `<div class="item"><strong>${v.text}</strong><br><span style="color:#666;">${v.typ}</span></div>`;
+                });
+                seznamDiv.innerHTML = html;
+                document.getElementById('pocet').innerHTML = `celkem fragmentů: ${vysledky.length}`;
+            }
+            resultsDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
