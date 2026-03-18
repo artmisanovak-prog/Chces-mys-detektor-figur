@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzátor metafor · Chceš myš?</title>
+    <style>
+        /* stejný styl jako předchozí verze, beze změn */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000; color: #fff; font-family: 'Courier New', monospace;
+            line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto;
+        }
+        h1 { font-size: 2rem; font-weight: 300; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        .sub {
+            color: #aaa; font-size: 0.9rem; margin-bottom: 30px;
+            border-left: 2px solid #444; padding-left: 15px;
+        }
+        .sub a { color: #fff; text-decoration: underline dotted #666; }
+        .sub a:hover { color: #ccc; }
+        textarea {
+            width: 100%; background: #111; border: 1px solid #333; color: #fff;
+            font-family: 'Courier New', monospace; font-size: 1rem; padding: 15px;
+            margin: 15px 0; border-radius: 0; resize: vertical;
+        }
+        textarea:focus { outline: none; border-color: #666; }
+        button {
+            background: #000; color: #fff; border: 1px solid #444; padding: 12px 25px;
+            font-family: 'Courier New', monospace; font-size: 1rem; cursor: pointer;
+            margin-bottom: 30px; transition: all 0.2s;
+        }
+        button:hover { background: #111; border-color: #888; }
+        .results { border: 1px solid #333; padding: 20px; margin-top: 20px; }
+        .results h2 { font-size: 1.3rem; font-weight: 300; margin-bottom: 15px; color: #ccc; }
+        .metafora-item {
+            border-left: 2px solid #555; padding: 10px 15px; margin-bottom: 15px; background: #0a0a0a;
+        }
+        .metafora-item strong { color: #fff; font-weight: 400; }
+        .metafora-item .typ {
+            color: #888; font-size: 0.85rem; margin-top: 5px; font-style: italic;
+        }
+        .note {
+            color: #666; font-size: 0.8rem; margin-top: 20px; border-top: 1px solid #222; padding-top: 15px;
+        }
+        hr { border: none; border-top: 1px solid #222; margin: 25px 0; }
+        footer { margin-top: 40px; color: #444; font-size: 0.8rem; text-align: right; }
+    </style>
+    <script src="slovniky.js"></script>   <!-- načtení externích slovníků -->
+</head>
+<body>
+    <h1>ANALYZÁTOR METAFOR</h1>
+    <div class="sub">
+        ↑ založeno na analýze <strong>40 pohádek</strong> a <strong>7 000+ výskytů figur</strong><br>
+        © 2026 <a href="#">Michaela Nováková</a> – systém <strong>Chceš myš?</strong><br>
+        ↔ detekce podle opakujících se vzorců: „X je Y“, „X jako Y“, personifikace, fyzikalizace<br>
+        ↔ slovníky jsou v samostatném souboru <strong>slovniky.js</strong> – můžeš je libovolně rozšiřovat
+    </div>
+
+    <textarea id="inputText" rows="10" placeholder="Sem vlož text k analýze..."></textarea>
+    <button id="analyzeBtn">ANALYZOVAT METAFORY</button>
+
+    <div id="results" class="results" style="display: none;">
+        <h2>🔍 Nalezené metafory</h2>
+        <div id="metaforaList"></div>
+        <div id="statistika" style="margin-top:15px; color:#aaa;"></div>
+        <div class="note" id="poznamka"></div>
+    </div>
+
+    <hr>
+    <div style="color:#333; font-size:0.8rem;">
+        ↔ detekční pravidla:<br>
+        • identitní: „X je Y“ (kde Y není běžná vlastnost X)<br>
+        • přirovnání: „jako“, „jakoby“, „než“<br>
+        • personifikace: neživé + lidské sloveso (mluví, myslí, cítí)<br>
+        • fyzikalizace: abstraktní + fyzické sloveso (padá, teče, visí)<br>
+        • „X z Y“ (materiálová metafora)<br>
+        • paradoxy: logické rozpory (detekce základních vzorců)
+    </div>
+    <footer>
+        analyzátor metafor · součást projektu Chceš myš? · autorka: Michaela Nováková
+    </footer>
+
+    <script>
+        (function() {
+            // ========== SLOVNÍKY JSOU NYNÍ V GLOBÁLNÍM OBJEKTU SLOVNIKY ==========
+            // Stačí je použít – jsou definovány v externím souboru slovniky.js
+
+            // Pro snazší psaní si je uložíme do lokálních proměnných
+            const LIDSKA_SLOVESA = SLOVNIKY.lidskaSlovesa;
+            const FYZICKA_SLOVESA = SLOVNIKY.fyzickaSlovesa;
+            const BEZNA_SPOJENI = SLOVNIKY.beznaSpojeni;
+            const nezivePodmety = SLOVNIKY.nezivePodmety;
+            const abstraktni = SLOVNIKY.abstraktni;
+            const materialy = SLOVNIKY.materialy;
+            const emoce = SLOVNIKY.emoce;
+
+            // ========== DETEKČNÍ FUNKCE (zcela stejné jako dříve) ==========
+
+            function detekujIdentitniMetafory(text) {
+                const vety = text.split(/[.!?…]+/);
+                const nalezy = [];
+
+                vety.forEach((veta, index) => {
+                    veta = veta.trim();
+                    if (!veta) return;
+
+                    const match = veta.match(/\b(\w+(?:\s+\w+)?)\s+(je|jsou|byl|byla|byli|bylo|budou|bude|není|nejsou|nebyl|nebyla|nebyli|nebylo)\s+(\w+(?:\s+\w+)?)\b/i);
+
+                    if (match) {
+                        const x = match[1];
+                        const y = match[3];
+                        const spojeni = `${x} ${match[2]} ${y}`;
+
+                        let jeBezne = false;
+                        for (let bs of BEZNA_SPOJENI) {
+                            if (spojeni.toLowerCase().includes(bs)) {
+                                jeBezne = true;
+                                break;
+                            }
+                        }
+
+                        if (!jeBezne && x.length > 2 && y.length > 2) {
+                            nalezy.push({
+                                text: spojeni,
+                                typ: 'identitní (X je Y)',
+                                veta: veta,
+                                index: index
+                            });
+                        }
+                    }
+                });
+
+                return nalezy;
+            }
+
+            function detekujPrirovnani(text) {
+                const vety = text.split(/[.!?…]+/);
+                const nalezy = [];
+
+                vety.forEach((veta, index) => {
+                    veta = veta.trim();
+                    if (!veta) return;
+
+                    const match = veta.match(/\b(\w+(?:\s+\w+)?)\s+(jako|jakoby|než)\s+(\w+(?:\s+\w+)?)\b/i);
+
+                    if (match) {
+                        const a = match[1];
+                        const b = match[3];
+                        const spojeni = `${a} ${match[2]} ${b}`;
+
+                        if (a.length > 2 && b.length > 2) {
+                            nalezy.push({
+                                text: spojeni,
+                                typ: 'přirovnání (jako / než)',
+                                veta: veta,
+                                index: index
+                            });
+                        }
+                    }
+                });
+
+                return nalezy;
+            }
+
+            function detekujPersonifikaci(text) {
+                const vety = text.split(/[.!?…]+/);
+                const nalezy = [];
+
+                vety.forEach((veta, index) => {
+                    veta = veta.trim();
+                    if (!veta) return;
+
+                    for (let podmět of nezivePodmety) {
+                        const regex = new RegExp(`\\b${podmět}\\s+(\\w+)`, 'i');
+                        const match = veta.match(regex);
+
+                        if (match) {
+                            const sloveso = match[1].toLowerCase();
+
+                            for (let lidske of LIDSKA_SLOVESA) {
+                                if (sloveso.includes(lidske) || sloveso.startsWith(lidske)) {
+                                    nalezy.push({
+                                        text: `${podmět} ${sloveso}`,
+                                        typ: 'personifikace (neživé + lidské sloveso)',
+                                        veta: veta,
+                                        index: index
+                                    });
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                });
+
+                return nalezy;
+            }
+
+            function detekujFyzikalizaci(text) {
+                const vety = text.split(/[.!?…]+/);
+                const nalezy = [];
+
+                vety.forEach((veta, index) => {
+                    veta = veta.trim();
+                    if (!veta) return;
+
+                    for (let abstrakt of abstraktni) {
+                        const regex = new RegExp(`\\b${abstrakt}\\s+(\\w+)`, 'i');
+                        const match = veta.match(regex);
+
+                        if (match) {
+                            const sloveso = match[1].toLowerCase();
+
+                            for (let fyzicke of FYZICKA_SLOVESA) {
+                                if (sloveso.includes(fyzicke) || sloveso.startsWith(fyzicke)) {
+                                    nalezy.push({
+                                        text: `${abstrakt} ${sloveso}`,
+                                        typ: 'fyzikalizace (abstraktní + fyzické sloveso)',
+                                        veta: veta,
+                                        index: index
+                                    });
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                });
+
+                return nalezy;
+            }
+
+            function detekujMaterializaci(text) {
+                const vety = text.split(/[.!?…]+/);
+                const nalezy = [];
+
+                vety.forEach((veta, index) => {
+                    veta = veta.trim();
+                    if (!veta) return;
+
+                    for (let material of materialy) {
+                        for (let emoceSlovo of emoce) {
+                            const regex = new RegExp(`\\b${material}\\s+${emoceSlovo}\\b|\\b${emoceSlovo}\\s+${material}\\b`, 'i');
+                            if (regex.test(veta)) {
+                                nalezy.push({
+                                    text: `${material} ${emoceSlovo}`,
+                                    typ: 'materializace (emoce jako hmota)',
+                                    veta: veta,
+                                    index: index
+                                });
+                            }
+                        }
+                    }
+                });
+
+                return nalezy;
+            }
+
+            function detekujParadoxy(text) {
+                const vety = text.split(/[.!?…]+/);
+                const nalezy = [];
+
+                const vzorce = [
+                    /(\w+)\s+(a přesto|a přece|ale přesto|ale stejně)\s+(ne-?\w+|non-?\w+)/i,
+                    /(\w+)\s+není\s+(\w+)\s+ale\s+není\s+to\s+(pravda|ono)/i,
+                    /(padá|letí|stoupá)\s+(nahoru|dolů).*?(ale|přesto).*?(padá|letí|stoupá)\s+(dolů|nahoru)/i,
+                    /\b(živý|živá|živé)\s+(mrtvola|mrtvý|neživý)\b/i,
+                    /\b(tma|temnota)\s+(světlo|záře|jas)\b/i,
+                    /\b(světlo)\s+(tma|temnota)\b/i
+                ];
+
+                vety.forEach((veta, index) => {
+                    veta = veta.trim();
+                    if (!veta) return;
+
+                    for (let vzor of vzorce) {
+                        if (vzor.test(veta)) {
+                            nalezy.push({
+                                text: veta.substring(0, 60) + '...',
+                                typ: 'paradox (logický rozpor)',
+                                veta: veta,
+                                index: index
+                            });
+                            break;
+                        }
+                    }
+                });
+
+                return nalezy;
+            }
+
+            // ========== HLAVNÍ FUNKCE ==========
+            function analyzovat() {
+                const text = document.getElementById('inputText').value.trim();
+
+                if (!text) {
+                    alert('Vlož text k analýze.');
+                    return;
+                }
+
+                const identitni = detekujIdentitniMetafory(text);
+                const prirovnani = detekujPrirovnani(text);
+                const personifikace = detekujPersonifikaci(text);
+                const fyzikalizace = detekujFyzikalizaci(text);
+                const materializace = detekujMaterializaci(text);
+                const paradoxy = detekujParadoxy(text);
+
+                const vsechny = [
+                    ...identitni.map(m => ({...m, kategorie: 'identitní'})),
+                    ...prirovnani.map(m => ({...m, kategorie: 'přirovnání'})),
+                    ...personifikace.map(m => ({...m, kategorie: 'personifikace'})),
+                    ...fyzikalizace.map(m => ({...m, kategorie: 'fyzikalizace'})),
+                    ...materializace.map(m => ({...m, kategorie: 'materializace'})),
+                    ...paradoxy.map(m => ({...m, kategorie: 'paradox'}))
+                ];
+
+                const resultsDiv = document.getElementById('results');
+                const listDiv = document.getElementById('metaforaList');
+                const statDiv = document.getElementById('statistika');
+                const pozDiv = document.getElementById('poznamka');
+
+                if (vsechny.length === 0) {
+                    listDiv.innerHTML = '<p style="color:#888;">✗ Žádné metafory nenalezeny (podle pravidel).</p>';
+                    statDiv.innerHTML = '';
+                    pozDiv.innerHTML = '↑ může to být tím, že text neobsahuje typické vzorce, nebo jsou metafory skryté jinak.';
+                } else {
+                    let html = '';
+                    vsechny.forEach((m, i) => {
+                        html += `
+                            <div class="metafora-item">
+                                <strong>${m.text}</strong>
+                                <div class="typ">${m.typ} · kategorie: ${m.kategorie}</div>
+                                <div style="color:#666; font-size:0.8rem; margin-top:5px;">„${m.veta.substring(0, 80)}${m.veta.length > 80 ? '…' : ''}“</div>
+                            </div>
+                        `;
+                    });
+                    listDiv.innerHTML = html;
+
+                    const kategorieStat = {};
+                    vsechny.forEach(m => {
+                        kategorieStat[m.kategorie] = (kategorieStat[m.kategorie] || 0) + 1;
+                    });
+
+                    let statHtml = '<strong>souhrn:</strong> ';
+                    for (let kat in kategorieStat) {
+                        statHtml += `${kat}: ${kategorieStat[kat]}, `;
+                    }
+                    statHtml = statHtml.slice(0, -2);
+                    statDiv.innerHTML = statHtml;
+
+                    pozDiv.innerHTML = '↑ detekce podle vzorců z 40 pohádek – nemusí najít všechny metafory, ale ukazuje typické struktury.';
+                }
+
+                resultsDiv.style.display = 'block';
+            }
+
+            document.getElementById('analyzeBtn').addEventListener('click', analyzovat);
+        })();
+    </script>
+</body>
+</html>
