@@ -1,0 +1,37 @@
+// ========== figury/gradace/gradace_ukazky.json ==========
+{
+  "nazev": "Gradace",
+  "popis": "Stupňování, řazení výrazů od nejslabšího po nejsilnější (nebo naopak).",
+  "ukazky": [
+    {
+      "text": "Hlubší. Širší. Pomalejší.",
+      "pohadka": "O rybě",
+      "kontext": "Jak se šíří zvuk pod vodou.",
+      "poznamka": "Stupňování vlastností."
+    },
+    {
+      "text": "Nebyla statečnější než ostatní, nebyla chytřejší, dokonce ani nebyla rychlejší.",
+      "pohadka": "O zaječici",
+      "kontext": "Definice hrdinky negacemi.",
+      "poznamka": "Gradace negací – od statečnosti k rychlosti."
+    },
+    {
+      "text": "Zapřít. Zrušit. Zneplatnit. Zpochybnit. Znejistit. Zamluvit.",
+      "pohadka": "O jednorožci",
+      "kontext": "Jednorožec popírá svůj původ.",
+      "poznamka": "Stupňování intenzity popírání."
+    },
+    {
+      "text": "Z ploutve a tlapy. Z bělosti a lesku. Ze šupin a z kožichu. Z úsměvu a zubů a z dechu, co se mění v mlhu.",
+      "pohadka": "O jednorožci",
+      "kontext": "Jak vznikl jednorožec.",
+      "poznamka": "Gradace od fyzických částí k abstraktním."
+    },
+    {
+      "text": "ale vždycky o něco málo / někdy i o docela dost / dřív, než měla věta původně skončit",
+      "pohadka": "O kocourovi",
+      "kontext": "Jak kocour předbíhá.",
+      "poznamka": "Stupňování míry předbíhání."
+    }
+  ]
+}
