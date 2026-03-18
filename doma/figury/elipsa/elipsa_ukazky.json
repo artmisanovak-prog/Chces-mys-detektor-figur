@@ -1,0 +1,36 @@
+{
+  "nazev": "Elipsa",
+  "popis": "Vynechání části věty (slovesa, podmětu), která je snadno doplnitelná z kontextu.",
+  "ukazky": [
+    {
+      "text": "Do ticha. Do koutů. Do skulin mezi slovama.",
+      "pohadka": "O myši",
+      "kontext": "Myš si začala zapisovat – ne na papír, ale do prostoru.",
+      "poznamka": "Série předložkových vazeb bez sloves."
+    },
+    {
+      "text": "Bílý. Roh. Lesk.",
+      "pohadka": "O jednorožci",
+      "kontext": "Popis jednorožce – jen podstatná jména.",
+      "poznamka": "Nominativy bez slovesa."
+    },
+    {
+      "text": "Hlubší. Širší. Pomalejší.",
+      "pohadka": "O rybě",
+      "kontext": "Jak se šíří zvuk pod vodou.",
+      "poznamka": "Stupňovaná adjektiva bez slovesa."
+    },
+    {
+      "text": "Ne v řadě. Ne v kruhu.",
+      "pohadka": "O myši",
+      "kontext": "Jak se hromadí zvířata.",
+      "poznamka": "Negace bez sloves."
+    },
+    {
+      "text": "Jen nit. Jen ticho.",
+      "pohadka": "O pavoukovi",
+      "kontext": "Co visí na pavučině.",
+      "poznamka": "Dvě eliptické věty."
+    }
+  ]
+}
