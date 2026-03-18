@@ -1,0 +1,43 @@
+// ========== figury/negace/negace_ukazky.json ==========
+{
+  "nazev": "Negace",
+  "popis": "Vyjádření záporu, popření. Časté je opakování negací, definice skrze to, co věc není.",
+  "ukazky": [
+    {
+      "text": "Nebyla nijak zvlášť rychlá, ale ani úplně pomalá. Nebyla hloupá, ale ani kdovíjak chytrá.",
+      "pohadka": "O myši",
+      "kontext": "Charakteristika myši.",
+      "poznamka": "Opakované „nebyla“, definice negací."
+    },
+    {
+      "text": "Nebyla statečnější než ostatní, nebyla chytřejší, dokonce ani nebyla rychlejší.",
+      "pohadka": "O zaječici",
+      "kontext": "Definice hrdinky.",
+      "poznamka": "Trojí negace."
+    },
+    {
+      "text": "Ne zvíře. Ne postava. Ne symbol. Ale produkt.",
+      "pohadka": "O krokodýlovi",
+      "kontext": "Co je krokodýl.",
+      "poznamka": "Série negací."
+    },
+    {
+      "text": "ne tři, ne jednu – dvě – přesně",
+      "pohadka": "O kocourovi",
+      "kontext": "Kolik berušek.",
+      "poznamka": "Negace špatných možností."
+    },
+    {
+      "text": "Ne jako zákazníci. Ne jako návštěvníci. Jako na kontrolu.",
+      "pohadka": "O krokodýlovi",
+      "kontext": "Jak přišel jazyk.",
+      "poznamka": "Opakované „ne jako“."
+    },
+    {
+      "text": "Ne v delfíny. Ne v lední medvědy.",
+      "pohadka": "O jednorožci",
+      "kontext": "V čem jednorožec nevěří.",
+      "poznamka": "Opakování „ne v“."
+    }
+  ]
+}
