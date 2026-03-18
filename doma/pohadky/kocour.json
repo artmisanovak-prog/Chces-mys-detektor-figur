@@ -1,0 +1,14 @@
+// ========== pohadky/kocour.json ==========
+{
+  "nazev": "O kocourovi",
+  "karta": "kocour",
+  "text": "Sležral dvě - ne tři, ne jednu - dvě - přesně -14 teček a trvalo to půl hodiny - 30 minut - přesně.\n\nJak to přišlo tak to přestalo.\nRáz na ráz.\n\nChňap a hlt a chlamst - nebo něco takového a nakonec - mlask, mlask - dvakrát - přesně.\n\nŽily byly dvě berušky, každá sedm teček měla, když uviděl je jeden kocour byla to mela.\nAspoň pro ně.\nPo 14ti tečkách v jednom mžiku zem se slehla.\nRozhodně aspoň kocour se svými útrobami.\n\nAle ta myš, vždycky zvědavá byla.\nOdmalička chodívala a kde mohla se vyptávala, kde se tečky na beruškách vzaly?\nK čemu je maji?\nProč si radši nevytvoří pravý maskování?\n\nA ta přesná matika..\nKdo vlastně z těch, co s nimi přijdou do styku, takhle přesně počítá?\n\nNo a toho dne - náhle - se to stalo a myš svou odpověď měla.\n\nKocour mlaskl a pak znovu a hned na to začalo to.\nPůl hodiny a bylo to zaznamenáno - přesně.\n\nKocour krkal tečky a dokončoval věty!\nNěkdy celé souvětí!!\nJenomže tím zároveň skákal lidem do řeči, tím že za ně dokončoval, co nedokončili.\n\nSkočil všem do řeči koncem věty\n\nal vždycky o něco málo\n\nněkdy i o docela dost\n\ndřív, než měla věta původně skončit\n\nnebo - než původně věta skončit měla.\n\nA celou půlhodinu nemohl tenkrát nikdo nic ne - dokončit.\nNešlo to.\n\nKaždému dřív.\n\nnež se k tomu dostal.\n\nvšem kocour větu ukončil.\n\nHned.\n\nKocour se tomu smál, ale krkal dál.\nA krkal, dokud neskončil.\nPředstavte si to:\nSkončil větu a pak skončil krkat.\n\nA lidé zase začali moct své věty ukončovat sami.\nHned.\n\nJenže, jak se to tak občas stává, přestože nikdo nevěděl co, každý věděl, že něco nebylo stejné.\n\nA to, co jednou není stejné dnes, to není jednou stejné nikdy.\n\nJen nedokončené věty bývají všechny stejné. Jednou, dnes i zítra.\n\nBerušky mají na sobě nedokončené konce vět. Věci, které jsou nespolknuté.\n\nKocour to nevěděl - a dvě spolknul.\nSpolknuté konce ale vykrkal zpátky a lide se naučili, že všechno se spolknout nedá.\nA že tečka je někdy silnější, než celá věta.\n\nKocour se nažral a myš i věty zůstali celé.\nDíky bohu za to.\nŠtěstí dvou berušek se vrátilo zpátky.\n\nAle všimly si toho jen kocour a malá myš.\nA ani jeden neříkali nic.\n\nKONEC",
+  "anotace": [
+    { "start": 5, "end": 40, "figury": ["elipsa", "repetice"], "uhel": 0 },
+    { "start": 80, "end": 110, "figury": ["onomatopoie"], "uhel": 270 },
+    { "start": 150, "end": 180, "figury": ["hyperbola"], "uhel": 270 },
+    { "start": 220, "end": 260, "figury": ["fyzikalizace"], "uhel": 120 },
+    { "start": 300, "end": 350, "figury": ["anafora", "gradace"], "uhel": 0 },
+    { "start": 400, "end": 430, "figury": ["paradox"], "uhel": 60 }
+  ]
+}
