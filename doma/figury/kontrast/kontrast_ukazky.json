@@ -1,0 +1,43 @@
+// ========== figury/kontrast/kontrast_ukazky.json ==========
+{
+  "nazev": "Kontrast",
+  "popis": "Stavění protikladných výrazů, myšlenek nebo situací vedle sebe.",
+  "ukazky": [
+    {
+      "text": "ostatní běželi kupředu před ohněm, ona udělala pravý opak: skočila přímo do plamenů.",
+      "pohadka": "O zaječici",
+      "kontext": "Zaječice versus ostatní zvířata.",
+      "poznamka": "Kontrast směrů – kupředu × do plamenů."
+    },
+    {
+      "text": "Kdo měl víc než jedno oko, byl podezřelý. Kdo měl méně než jedno, byl prorok.",
+      "pohadka": "O pávovi",
+      "kontext": "Pávova teorie o očích.",
+      "poznamka": "Kontrast v hodnocení (podezřelý × prorok)."
+    },
+    {
+      "text": "ryby × ptáci",
+      "pohadka": "O rybě",
+      "kontext": "Srovnání ryb a ptáků.",
+      "poznamka": "Kontrast dvou světů."
+    },
+    {
+      "text": "Hlavou dolů. Srdcem vzhůru.",
+      "pohadka": "O plameňákovi",
+      "kontext": "Plameňák letí hlavou dolů.",
+      "poznamka": "Kontrast směrů – fyzický × emocionální."
+    },
+    {
+      "text": "Nebyla nijak zvlášť rychlá, ale ani úplně pomalá. Nebyla hloupá, ale ani kdovíjak chytrá.",
+      "pohadka": "O myši",
+      "kontext": "Charakteristika myši.",
+      "poznamka": "Kontrast v negacích."
+    },
+    {
+      "text": "nad × pod",
+      "pohadka": "O žralokovi",
+      "kontext": "Žralokův poměr.",
+      "poznamka": "Základní prostorový kontrast."
+    }
+  ]
+}
