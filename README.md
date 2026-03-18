@@ -16,7 +16,8 @@ Licence: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (
 
 ---
 
-[metafora analýa](doma/figury/metafora/analyza.html)
+- [metafora analýa](doma/figury/metafora/analyza.html)
+- [analyzator metafor MINI](doma/analyzator_metafor.html)
 
 ---
 
