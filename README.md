@@ -1,6 +1,8 @@
 # Chces-mys-detektor-figur
 
-# Chceš myš? – Kreativní dílna jazyka
+---
+
+### Chceš myš? – Kreativní dílna jazyka
 
 Dokumentace projektu • verze 1.0 • březen 2026  
 Autorka: Michaela Nováková  
