@@ -1,0 +1,43 @@
+// ========== figury/personifikace/personifikace_ukazky.json ==========
+{
+  "nazev": "Personifikace",
+  "popis": "Přiřazení lidských vlastností, činností nebo emocí neživým věcem, zvířatům nebo abstraktním pojmům.",
+  "ukazky": [
+    {
+      "text": "oheň se rozběhl přes lány",
+      "pohadka": "O zaječici",
+      "kontext": "Oheň se šíří polem.",
+      "poznamka": "Oheň má lidskou schopnost – běžet."
+    },
+    {
+      "text": "voda odpověděla",
+      "pohadka": "O rybě",
+      "kontext": "Voda reaguje na rybí rap.",
+      "poznamka": "Voda má lidskou schopnost – odpovídat."
+    },
+    {
+      "text": "páv přepočítává svá oka",
+      "pohadka": "O myši",
+      "kontext": "Páv se dívá na svá pera.",
+      "poznamka": "Páv má lidskou činnost – počítání."
+    },
+    {
+      "text": "myš si začala věci zapisovat",
+      "pohadka": "O myši",
+      "kontext": "Myš zaznamenává dění.",
+      "poznamka": "Myš má lidskou činnost – psaní."
+    },
+    {
+      "text": "otázka se mu pevně zakousla do hlavy",
+      "pohadka": "O pandě a vlkovi",
+      "kontext": "Vlk přemýšlí nad pandiným výrokem.",
+      "poznamka": "Abstraktní otázka se chová jako zvíře – zakusuje se."
+    },
+    {
+      "text": "stromy, které si ho pamatovaly",
+      "pohadka": "O slonovi",
+      "kontext": "Slon prochází krajinou.",
+      "poznamka": "Stromy mají paměť."
+    }
+  ]
+}
