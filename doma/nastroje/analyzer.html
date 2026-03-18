@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hlavní analyzátor figur · Chceš myš?</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000; color: #fff; font-family: 'Courier New', monospace;
+            line-height: 1.6; padding: 20px; max-width: 1000px; margin: 0 auto;
+        }
+        h1 { font-size: 2rem; font-weight: 300; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+        h2 { font-size: 1.3rem; font-weight: 300; margin: 20px 0 10px; color: #ccc; }
+        textarea {
+            width: 100%; background: #111; border: 1px solid #333; color: #fff;
+            font-family: 'Courier New', monospace; font-size: 1rem; padding: 15px;
+            margin: 15px 0; border-radius: 0; resize: vertical;
+        }
+        button {
+            background: #000; color: #fff; border: 1px solid #444; padding: 12px 25px;
+            font-family: 'Courier New', monospace; font-size: 1rem; cursor: pointer;
+            margin-bottom: 30px; transition: all 0.2s;
+        }
+        button:hover { background: #111; border-color: #888; }
+        .results { border: 1px solid #333; padding: 20px; margin-top: 20px; }
+        .figura-blok {
+            margin-bottom: 25px; border-left: 2px solid #555; padding-left: 15px;
+        }
+        .figura-nazev {
+            font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 10px;
+        }
+        .item {
+            background: #0a0a0a; border: 1px solid #222; padding: 8px 12px; margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        .statistika {
+            margin-top: 20px; padding-top: 15px; border-top: 1px solid #333;
+            display: flex; flex-wrap: wrap; gap: 15px;
+        }
+        .stat-item {
+            background: #111; padding: 5px 10px; border: 1px solid #333;
+        }
+        .footer {
+            margin-top: 40px; color: #444; font-size: 0.8rem; text-align: right;
+        }
+        .loader {
+            display: inline-block; width: 20px; height: 20px; border: 2px solid #333;
+            border-top-color: #fff; border-radius: 50%; animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h1>HLAVNÍ ANALYZÁTOR FIGUR</h1>
+    <p style="color:#aaa; margin-bottom:20px;">
+        ↑ načítá všechny dostupné detektory a zobrazuje souhrnné výsledky
+    </p>
+
+    <textarea id="inputText" rows="8" placeholder="Sem vlož text k analýze..."></textarea>
+    <button id="analyzeBtn">ANALYZOVAT VŠECHNY FIGURY</button>
+
+    <div id="results" class="results" style="display: none;">
+        <h2>🔍 Výsledky analýzy</h2>
+        <div id="vysledky"></div>
+        <div class="statistika" id="statistika"></div>
+    </div>
+
+    <div class="footer">
+        hlavní analyzátor · součást projektu Chceš myš? · © Michaela Nováková 2026
+    </div>
+
+    <script>
+        // Seznam dostupných detektorů (bude se postupně rozšiřovat)
+        const DETEKTORY = [
+            { nazev: 'elipsa', soubor: '../figury/elipsa/elipsa.js' },
+            { nazev: 'metafora', soubor: '../figury/metafora/metafora.js' },
+            { nazev: 'personifikace', soubor: '../figury/personifikace/personifikace.js' },
+            { nazev: 'paradox', soubor: '../figury/paradox/paradox.js' }
+        ];
+
+        // Načtení všech detektorů
+        function nactiDetektory(callback) {
+            let nacteno = 0;
+            
+            DETEKTORY.forEach(d => {
+                const script = document.createElement('script');
+                script.src = d.soubor;
+                script.onload = () => {
+                    nacteno++;
+                    if (nacteno === DETEKTORY.length) {
+                        callback();
+                    }
+                };
+                document.head.appendChild(script);
+            });
+        }
+
+        // Hlavní analýza
+        function analyzovat() {
+            const text = document.getElementById('inputText').value.trim();
+            if (!text) { alert('Vlož text.'); return; }
+
+            const resultsDiv = document.getElementById('results');
+            const vysledkyDiv = document.getElementById('vysledky');
+            const statistikaDiv = document.getElementById('statistika');
+            
+            let html = '';
+            let celkem = 0;
+            const stat = {};
+
+            // Postupně voláme jednotlivé detektory
+            DETEKTORY.forEach(d => {
+                const funkce = window[`detekuj${d.nazev.charAt(0).toUpperCase() + d.nazev.slice(1)}`];
+                if (typeof funkce === 'function') {
+                    const vysledky = funkce(text);
+                    celkem += vysledky.length;
+                    stat[d.nazev] = vysledky.length;
+
+                    if (vysledky.length > 0) {
+                        html += `<div class="figura-blok">`;
+                        html += `<div class="figura-nazev">${d.nazev.toUpperCase()} (${vysledky.length})</div>`;
+                        vysledky.forEach(v => {
+                            html += `<div class="item"><strong>${v.text || v.zkratka || '—'}</strong> · ${v.typ || ''}</div>`;
+                        });
+                        html += `</div>`;
+                    }
+                }
+            });
+
+            if (celkem === 0) {
+                html = '<p style="color:#888;">✗ Žádné figury nenalezeny.</p>';
+            }
+
+            vysledkyDiv.innerHTML = html;
+
+            // Statistika
+            let statHtml = '';
+            for (let [fig, pocet] of Object.entries(stat)) {
+                statHtml += `<span class="stat-item">${fig}: ${pocet}</span>`;
+            }
+            statistikaDiv.innerHTML = statHtml + `<span class="stat-item">celkem: ${celkem}</span>`;
+
+            resultsDiv.style.display = 'block';
+        }
+
+        // Po načtení stránky nahrajeme detektory
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('analyzeBtn');
+            btn.disabled = true;
+            btn.innerHTML = 'NAČÍTÁM DETEKTORY <span class="loader"></span>';
+
+            nactiDetektory(() => {
+                btn.disabled = false;
+                btn.innerHTML = 'ANALYZOVAT VŠECHNY FIGURY';
+                btn.addEventListener('click', analyzovat);
+            });
+        });
+    </script>
+</body>
+</html>
