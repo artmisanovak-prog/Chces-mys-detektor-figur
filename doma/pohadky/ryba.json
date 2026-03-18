@@ -1,0 +1,15 @@
+// ========== pohadky/ryba.json ==========
+{
+  "nazev": "O rybě",
+  "karta": "ryba",
+  "text": "Říká se, že ryby mlčí.\nŽe nemají hlas.\nŽe jen plavou, koukají, a občas se nechají chytit.\nAle to je omyl. Kec. Suchozemská lež.\n\nRyby totiž nemlčí.\nRyby rapujou.\n\nNe tak, jak si to představuješ – žádné mikrofony, žádné beaty z repro beden.\n„Rybí rap je jinej.\nJe to rytmus proudů.\nJe to nížka, výška vln a vlnek.\nJe to tempo vodních kruhů.\nJe to mezera mezi bublinama.\n\nPod vodou se zvuk jinak šíří.\nHlubší. Širší. Pomalejší.\nA tak ryby neřvou.\nRyby vibrujou.\n\nKaždej druh rybí má svůj styl hudební.\nKosatky zpívají chansony – dlouhé, nostalgické, ovlivňují směry proudů.\nŽraloci zpívaj gospel – hluboký a s ozvěnou. Míchají barevné odstíny hladin s tóny hlubin.\nVelryba si troufne na operu a medúzy jí dělaj vokály nebo se daj na triangly, rolničky, zvonce.\nDelfin je folklor.\nChobotnice strihne jazzove imprivizace.\nRyba co se nafukuje zvládá dechovky, ale nemá je ráda.\nPiraňi balady.\nA kapr zkouší hrdelní zpěvy.\nMušle a lastury pějí lovestory.\nSka umí létací ryby.\nTučňák se vidí v klasice.\nNa pop je odbornice bělice.\nA úhoř nemá hudební ambice.\n\nJe toho více.\nAle tohle všechno není hudba pro uši, toto ovlivňuje různé vodní vlastnosti.\n\nA ryba?\nRyba má rap.\nNe kvůli slávě.\nKvůli přesnosti.\n\nFlow je king a king je ryba.\nBeat jí dělá sea i jezera.\nRiff kape, flow teče.\nPřesná slova proudí jak voda.\nJejí punchline je fontána.\n\nKaždý verš má váhu.\nA tohle ryby umí.\nLíp než ptáci.\n\nPtačí zpěv?\nKřikot je to.\nŘev, ryk, krákot, jekot.\nTempo? Melodie? Text?\nPtáci neumí dávat.\nPtáci umí jen sprostě nadávat.\nPíp rýmuje s píp, jinak bez ideje.\nCokoli řeknou hned se cenzuruje.\n\nZato ryby fakt dávaj.\nDávaj rytmus vodě.\nDávaj smysl tichu.\nDávají beaty proudům.\n\nA stalo se jednoho dne, že ryba začala rapovat i na hladině.\nNe pro ostatní.\nPro vodu.\n\nA voda odpověděla.\nJinak se zavlnila.\nDo rytmu se natřásala.\nTvořila verše jako vodní kruhy, v kterých byly další kruhy.\nMlha, spadlá do polí, opsala jejich flow.\nA vytvořila kruhy v obilí.\nRybí hudba byla slyšet – ne uchem, ale okem, tělem.\n\nA tak se po kapkách roznáší všude kolem, že první místo v hitparádě vyhrály ryby – nepochybně.\n\nNe proto, že zpívaj.\nAle proto, že ví..\n\n..kdy mlčet.\n\nMožná je čas, aby se svět dozvěděl o rybím rapu.\nMožná je čas, aby se přestalo poslouchat a začalo se vnímat.\nMožná je čas, aby se ticho konečně dostalo nad hladinu.",
+  "anotace": [
+    { "start": 0, "end": 50, "figury": ["anafora"], "uhel": 90 },
+    { "start": 70, "end": 120, "figury": ["elipsa", "gradace"], "uhel": 0 },
+    { "start": 200, "end": 500, "figury": ["personifikace", "metafora"], "uhel": 150 },
+    { "start": 550, "end": 600, "figury": ["metafora"], "uhel": 150 },
+    { "start": 650, "end": 680, "figury": ["fyzikalizace"], "uhel": 120 },
+    { "start": 720, "end": 750, "figury": ["paradox", "oxymoron"], "uhel": 60 },
+    { "start": 780, "end": 820, "figury": ["synestezie"], "uhel": 150 }
+  ]
+}
