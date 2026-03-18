@@ -1,0 +1,14 @@
+// ========== pohadky/mys.json ==========
+{
+  "nazev": "O myši",
+  "karta": "mys",
+  "text": "Kdysi – zároveň ne tak docela dávno.\nA ne úplně blízko, ale zase ani ne nijak moc daleko.\nŽila jedna myš.\nByla malá, tak jak to u myší normálně bývá.\nA měla dvě veliké uši, což také není u myši žádná vzácnost.\n\nNebyla nijak zvlášť rychlá, ale ani úplně pomalá.\nNebyla hloupá, ale ani kdovíjak chytrá.\nNa první pohled obyčejná, běžná myš.\n\nAle ne - normální\nVšímala si věcí, které ostatní přehlíželi.\n\nNapříklad toho, že se ve vzduchu občas zadrhne věta.\nNebo že páv, když se nikdo nedívá, přepočítává svá oka.\nNebo že čáp, někdy jen tak přistane na komíně a zapomene, koho měl donést.\n\nA tahle myš si začala věci zapisovat.\nNe na papír.\nAle tak nějak.\nDo ticha.\nDo koutů.\nDo skulin mezi slovama, kde to obvykle nikdo nečte.\n\nA pak si jednoho dne všimla, že se kolem ní začínají hromadit zvířata.\n\nNe v řadě.\nNe v kruhu.\nProstě… tak nějak.\n\nA každé si neslo něco, co nevysvětlovalo.\n\nZajíc měl popálené uši a voněl po kouři.\nKocour se dusil smíchem, protože spolkl tečku.\nSlon si v chobotu nesl třešně, co nikdy nedozrají.\nA lemur se nedíval na nic, jen na stranu, kde nic nebylo.\n\nMyš neříkala nic.\nAle všechno si poznamenala.\nA pak se jednoho dne zeptala první větu.\n\nNe velkou.\nNe důležitou.\nJenom tu jednu:\n\n„Chceš myš?“\n\nA to nebyla otázka, co se ptá na ni samotnou.\nTo byla otázka, co se ptá na všechno.\n\nNa smysl.\nNa jazyk.\nNa strach.\nNa to, co si z nás kdo udělá.\n\nA taky na to, jestli si tuhle pohádku necháš necháš vyprávět do konce.\nNebo zapištíš a utečeš.\nNebo si ji složíš jinak.\n\nProtože od té chvíle, už to nebyla jen myš.\n\nByl to klíč.\nA pádlo.\nA past.\n\na konec úvodu. Ale začátek něčeho dalšího.\n\n..možná..",
+  "anotace": [
+    { "start": 10, "end": 60, "figury": ["elipsa"], "uhel": 120 },
+    { "start": 120, "end": 180, "figury": ["anafora", "negace"], "uhel": 0 },
+    { "start": 240, "end": 280, "figury": ["fyzikalizace"], "uhel": 120 },
+    { "start": 300, "end": 340, "figury": ["fragment", "apozio- peze"], "uhel": 300 },
+    { "start": 400, "end": 450, "figury": ["personifikace"], "uhel": 150 },
+    { "start": 500, "end": 550, "figury": ["metafora"], "uhel": 150 }
+  ]
+}
